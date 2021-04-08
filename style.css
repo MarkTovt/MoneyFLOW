@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Libre Baskerville', serif;
+}
+
+body{
+  width: 100%;
+  font-size: 3vh;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/finance-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-div-list{
+  position: fixed;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+  opacity: 0;  
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(134, 125, 125, 0.85);
+  padding: 100px 30px 30px 30px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.nav-div-list ul{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: right;
+  align-items: center;
+}
+
+#ulMenu li{
+  margin-bottom: 10px;
+}
+
+#nav-div, #header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+#nav-div-home{
+  float: left;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  z-index: 5;
+}
+
+.nav-text li { 
+  display: table-cell;
+  padding: 1vh;
+  text-align: center;
+  }
+
+.nav-text, .nav-text li a{
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  position: relative;
+}
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0.5vh;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#navbar{
+  margin-bottom: 100px;
+  }
+
+#sign-in-butt{
+  padding-top: 40px; 
+}
+
+#sign-in-butt>a{
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 1s;
+}
+
+#sign-in-butt>a:hover{
+  background-color: rgba(0,0,255,0.2);
+}
+
+#sign-in-butt>a:after{
+  background: none;
+}
+
+.menuToggle{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s;
+  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuToggle span{
+  display: block;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 5px;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.ulToggle{
+  visibility: visible;
+  opacity: 1;
+}
+
+.ulToggle>ul li a{
+  pointer-events: all;
+}
+
+.rotate_class{
+  transform: matrix(0, -1, -1, 0, -4, -4);
+}
+
